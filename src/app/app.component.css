@@ -1,0 +1,41 @@
+.row-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}
+
+mat-grid-list {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 50%;
+  margin: auto;
+}
+.example-margin {
+  margin: 0 10px;
+}
+@media only screen and (max-width: 768px) {
+  mat-form-field {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  mat-form-field {
+    width: 90%;
+    margin: auto;
+  }
+}

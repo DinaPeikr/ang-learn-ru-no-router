@@ -1,0 +1,27 @@
+<img [src]="imgSrc" alt="{{ title }}" class="img-fluid pointer" (click)="clickOnImg(div, $event)" />
+
+<div [innerHTML]="contentHead"></div>
+<h4 class="text-danger">{{ title }}</h4>
+<p>
+    {{ getFullName(user) }}'s salary is {{ getSalary(1.2) | currency: "GEL ":"symbol":"4.0-0" }}.
+</p>
+<div [innerHTML]="contentDiv" #div></div>
+
+<div class="my-4">
+    <div class="row mr-0 ml-0">
+        <!--    variant with HTMLInputElement-->
+        <input type="text" (input)="onSearch($event)" class="col-12 col-md-6 py-1" />
+        <p class="col-12 col-md-6 text-success py-1 mt-2 mt-md-0 mb-0">
+            {{ inputValueText }}
+        </p>
+    </div>
+</div>
+<div class="my-4">
+    <div class="row mr-0 ml-0">
+        <!--    variant with RefInputElement-->
+        <input type="text" #inputElement (input)="onSearchRef(inputElement.value)" class="col-12 col-md-6 py-1" />
+        <p class="col-12 col-md-6 text-success py-1 mt-2 mt-md-0 mb-0">
+            {{ inputValueTextRef }}
+        </p>
+    </div>
+</div>

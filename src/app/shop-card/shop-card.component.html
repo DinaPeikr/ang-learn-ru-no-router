@@ -1,0 +1,31 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <!--    <div mat-card-avatar  class="" [attr.style]="'background: url(../../assets/img/product-'+ (index+1) +'.jpg); background-size: cover;'"></div>-->
+        <div class="favorite-icon" (click)="product.isFavorite = !product.isFavorite">
+            <mat-icon *ngIf="product.isFavorite" [class.mat-accent]="product.isFavorite" class="favorite">
+                favorite
+            </mat-icon>
+            <mat-icon *ngIf="!product.isFavorite" color="primary" class="favorite">favorite_border</mat-icon>
+        </div>
+        <mat-card-title>{{ product.title }}
+            <!--      Index: {{index + 1}};-->
+            <!--      Count: {{count}};-->
+            <!--      First:  {{first}};-->
+            <!--      last: {{last}};-->
+            <!--      Even: {{even}};-->
+            <!--      Odd: {{odd}};-->
+        </mat-card-title>
+        <mat-card-subtitle>{{ product.author }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ product.img }}" alt="" [style.width.%]="50" />
+    <mat-card-content>
+        <h2>
+            {{ product.price | currency: "GEL":"symbol-narrow" }}
+        </h2>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button color="primary" (click)="addToCard()">
+      ADD TO CARD
+    </button>
+    </mat-card-actions>
+</mat-card>

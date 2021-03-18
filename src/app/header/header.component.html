@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+   <div fxLayout="row" fxLayoutAlign="start center">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon (click)="toggleSideNavFromHeader()">menu</mat-icon>
+    </button>
+    <span> {{OwnTitle}} </span>
+     <app-exchange-rates></app-exchange-rates>
+   </div>
+<!--    <span class="example-spacer"></span>-->
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon (click)="setFavorite($event)">favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon (click)="setShare($event)">share</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
